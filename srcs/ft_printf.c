@@ -6,7 +6,7 @@
 /*   By: jwolf <jwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 11:21:48 by jwolf             #+#    #+#             */
-/*   Updated: 2018/08/06 11:49:31 by jwolf            ###   ########.fr       */
+/*   Updated: 2018/08/06 12:24:27 by jwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,7 @@ int		printf_stuff(const char *s, va_list *args, size_t len)
 	char	*next;
 	
 	next = ft_strrchr(s, '%');
-	if (*s == '\0')
-		return (len);
-	if (next == NULL)
-	{
-		ft_putstr(s);
-		return (len + ft_strlen(s));
-	}
-	else if (next > s)
-	{
-		return (printf_stuff(next, args, len + (next - s)));
-	}
-	else
-	{
-		return (0);
-	}
+	return (ft_strlen(s));
 }
 
 int		ft_printf(const char *fmt, ...)
