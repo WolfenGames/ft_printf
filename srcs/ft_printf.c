@@ -6,7 +6,7 @@
 /*   By: jwolf <jwolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/06 11:21:48 by jwolf             #+#    #+#             */
-/*   Updated: 2018/08/06 11:48:53 by jwolf            ###   ########.fr       */
+/*   Updated: 2018/08/06 11:49:31 by jwolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ int		printf_stuff(const char *s, va_list *args, size_t len)
 	}
 	else if (next > s)
 	{
-		ft_putstr((const char *)(next - s));
-		ft_putnbr(ft_atoi(next));
 		return (printf_stuff(next, args, len + (next - s)));
 	}
 	else
